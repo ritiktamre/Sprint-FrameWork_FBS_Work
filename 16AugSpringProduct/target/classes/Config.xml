@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id="add" class="com.ash.spring.Address">
+    <property name="pincode" value="473443"></property>
+    <property name="place" value="Indore"></property>
+    <property name="houseNo" value="72"></property> 
+ </bean>
+
+ <bean id="Emp" class="com.ash.spring.Employee" init-method="init" scope="prototype" autowire="byType">
+    <property name="id" value="123"></property>
+    <property name="name" value="Radhe"></property>
+    <property name="salary" value="30000"></property>
+ <!--    <property name="Address" ref="add"></property> -->
+ </bean>
+ </beans>
